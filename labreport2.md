@@ -18,3 +18,10 @@ This is very similar to the first screenshot. Both are using the handleRequest(U
 
 ## Part 2
 
+### Failure inducing input for reversed method
+``` java
+public void testReverseLargerArray() {
+  int[] input1 = {3, 4, 5};
+  assertArrayEquals(new int[]{5, 4, 3}, ArrayExamples.reversed(input1));
+}
+```
