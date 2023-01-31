@@ -25,3 +25,46 @@ public void testReverseLargerArray() {
   assertArrayEquals(new int[]{5, 4, 3}, ArrayExamples.reversed(input1));
 }
 ```
+
+### Non-failure inducing input for reversed method
+``` java
+public void testReversed() {
+  int[] input1 = { };
+  assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
+}
+```
+
+### Symptom of the tests above
+![Image](https://media.discordapp.net/attachments/776893122592112663/1069814678512996373/image.png)
+First test failed, second test passed
+
+### Before and after reversed method
+
+#### Before
+``` java
+static int[] reversed(int[] arr) {
+  int[] newArray = new int[arr.length];
+  for(int i = 0; i < arr.length; i += 1) {
+    arr[i] = newArray[arr.length - i - 1];
+  }
+  return arr;
+}
+```
+
+#### After
+``` java
+static int[] reversed(int[] arr) {
+  int[] newArray = new int[arr.length];
+  for(int i = 0; i < arr.length; i += 1) {
+    newArray[i] = arr[arr.length - i - 1]; //newArray[i] changed from arr[i] and arr[arr.length - i - 1] changed from newArray
+  }
+  return newArray; //changed from arr
+}
+```
+
+This change fixes the issue because in the original code, the array arr is being assigned values from the array newArray, but newArray is just an array of zeroes the size of arr.length. Our fix assignes values from arr to newArray in reverse order, and returns newArray instead of arr.
+
+
+## Part 3
+
+Before week 2/3, I had no idea how to even begin in programming a webserver. These labs have helped me understand step by step how to start not only a web server, but also one that can have webpage outputs based on the inputs. This includes both performing math and also returning Strings.
