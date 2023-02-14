@@ -80,3 +80,26 @@ written_2/non-fiction/OUP/Kauffman/ch5.txt
 In the first code block, without the -i, grep cannot locate any of the files containing "birds" because the b in our word is capitilized. In the second code block, thanks to -i, the files are located even with the B being capitalized.
 
 Source: https://en.wikibooks.org/wiki/Grep
+
+
+
+## 4 - grep -c
+This command line option lets you count the number of lines that contain the keyword in a file. This lets you see how often a keyword shows up in a file without scrolling through the file.
+
+### Example 1
+
+```console
+eyaad@LAPTOP:~/skill-demo1-data$ grep -c "Lucayans" written_2/travel_guides/berlitz2/Bahamas-History.txt
+2
+```
+This indicates that there are 2 lines containing "Lucayans" in this file.
+
+### Example 2
+
+```console
+eyaad@LAPTOP:~/skill-demo1-data$ grep -c "birds" written_2/non-fiction/OUP/Berk/ch1.txt
+1
+```
+This command shows us that there is only 1 line containing "birds" in this file.
+
+Source: https://man7.org/linux/man-pages/man1/grep.1p.html
