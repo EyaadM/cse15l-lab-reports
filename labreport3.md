@@ -23,7 +23,7 @@ written_2/non-fiction/OUP/Kauffman/ch5.txt
 ```
 Once again, only the paths are listed. Without the -l keyword, this output would be many more lines long, and we might have had to scroll up to see all of the files that had the keyword.
 
-Source: https://www.gnu.org/savannah-checkouts/gnu/grep/manual/grep.html
+[Source](https://www.gnu.org/savannah-checkouts/gnu/grep/manual/grep.html)
 
 
 ## 2 - grep -r
@@ -47,7 +47,7 @@ written_2/non-fiction/OUP/Kauffman/ch5.txt
 ```
 Again, thanks to -r, we did not have to put /\*/\* for grep to locate these files. It is much more convienient to search for files this way.
 
-Source: https://www.gnu.org/savannah-checkouts/gnu/grep/manual/grep.html
+[Source](https://www.gnu.org/savannah-checkouts/gnu/grep/manual/grep.html)
 
 
 
@@ -79,7 +79,7 @@ written_2/non-fiction/OUP/Kauffman/ch5.txt
 ```
 In the first code block, without the -i, grep cannot locate any of the files containing "birds" because the b in our word is capitilized. In the second code block, thanks to -i, the files are located even with the B being capitalized.
 
-Source: https://en.wikibooks.org/wiki/Grep
+[Source](https://en.wikibooks.org/wiki/Grep)
 
 
 
@@ -102,4 +102,4 @@ eyaad@LAPTOP:~/skill-demo1-data$ grep -c "birds" written_2/non-fiction/OUP/Berk/
 ```
 This command shows us that there is only 1 line containing "birds" in this file.
 
-Source: https://man7.org/linux/man-pages/man1/grep.1p.html
+[Source](https://man7.org/linux/man-pages/man1/grep.1p.html)
